@@ -1,0 +1,23 @@
+<%--
+  ~ Aleksander Spyra for Software Development Academy, Wroclaw 2018
+  --%>
+
+<header style="background-color: gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <%--
+                    Użycie języka wyrażeń.
+                --%>
+                <a href="">
+                    <img class="" style="max-width: 200px; margin: 15px auto; display: block; vertical-align: bottom;"
+                         src="${pageContext.request.contextPath}/static/img/panda.jpg"
+                         alt="logo"/>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</header>
+
