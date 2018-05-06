@@ -22,6 +22,8 @@ public class FormHandlerServlet extends HttpServlet {
 
     private void printParameters(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
+        //response.setCharacterEncoding("UTF-8");
+        //request.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
 
         String method = request.getMethod();

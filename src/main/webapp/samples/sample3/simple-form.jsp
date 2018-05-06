@@ -27,11 +27,13 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
 
-            <form action="/sample3/form-handler-servlet" method="POST">
+            <form action="/sample3/form-handler-servlet" method="POST" >
                 <fieldset>
                     <legend>Informacje o studencie:</legend>
                     Imię: <input type="text" name="firstname" value="Grzegorz"><br>
                     Nazwisko: <input type="text" name="lastname" value="Brzęczyszczykiewicz"><br><br>
+                    Pobiera stypendium <input type = "checkbox" name = "scholarship" checked = "checked" />
+                    Mieszka w akademiku <input type = "checkbox" name = "dormitory"  />
                     <input type="submit" value="Wyślij">
                 </fieldset>
             </form>
