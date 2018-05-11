@@ -24,8 +24,18 @@ public class RailLink {
     @Column(name = "soldticket")
     private int soldTicket;
 
+    @Column(name = "price")
+    private int price;
+
     public RailLink() {
         this.soldTicket = 0;
+    }
+
+    public RailLink(City startCity, City destinationCity, int price) {
+        this.setStartCity(startCity);
+        this.setDestinationCity(destinationCity);
+        this.setPrice(price);
+        this.setSoldTicket(0);
     }
 
     public long getId() {
@@ -58,5 +68,13 @@ public class RailLink {
 
     public void setSoldTicket(int soldTicket) {
         this.soldTicket = soldTicket;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

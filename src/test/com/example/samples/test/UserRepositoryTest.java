@@ -19,22 +19,22 @@ public class UserRepositoryTest {
 //        UserRepository.getInstance().save(user);
 //    }
 
-//    @Test
-//    public void RailTest() {
-//        City city1 = new City();
-//        city1.setName("Wrocław");
-//        City city2 = new City();
-//        city2.setName("Katowice");
-//        RailRepository.getInstance().save(city1);
-//        RailRepository.getInstance().save(city2);
-//
-//        RailLink link1 = new RailLink();
-//        link1.setStartCity(city1);
-//        link1.setDestinationCity(city2);
-//        RailRepository.getInstance().save(link1);
-//    }
-
     @Test
+    public void RailTest() {
+        City city1 = new City();
+        city1.setName("Wrocław");
+        City city2 = new City();
+        city2.setName("Katowice");
+        RailRepository.getInstance().save(city1);
+        RailRepository.getInstance().save(city2);
+
+        RailLink link1 = new RailLink();
+        link1.setStartCity(city1);
+        link1.setDestinationCity(city2);
+        RailRepository.getInstance().save(link1);
+    }
+
+/*    @Test
     public void RailTest2() {
         List<City> list = RailRepository.getInstance().findCityByExactString("Wrocław");
         System.out.println("Full: ");
@@ -56,7 +56,7 @@ public class UserRepositoryTest {
         for (City c : list) {
             System.out.println(c.getName());
         }
-    }
+    }*/
 
 
 }

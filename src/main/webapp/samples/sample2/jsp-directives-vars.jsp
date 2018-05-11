@@ -32,8 +32,10 @@
         <div class="col-md-4">
             <h5>Kilka informacji wyciągniętych z żądania:</h5>
             <%--
-                Jak widać, do zmiennych zdefiniowanych można odwoływać się zarówno w czystej Javie,
-                przy użyciu wyrażeń czy skryptletów, jak również za pomocą Expression Language.
+                Jak widać, do zmiennych zdefiniowanych można odwoływać się zarówno w
+                czystej Javie,
+                przy użyciu wyrażeń czy skryptletów, jak również za pomocą
+                Expression Language.
             --%>
             <ul>
                 <li>Adres lokalny: <%= request.getLocalAddr() %></li>

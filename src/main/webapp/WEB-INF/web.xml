@@ -4,4 +4,16 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+
+<!--    <filter>
+        <filter-name>SimpleFilter</filter-name>
+        <filter-class>com.example.samples.sample6.SimpleFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SimpleFilter</filter-name>
+        &lt;!&ndash;<url-pattern>/*</url-pattern>&ndash;&gt;
+        <servlet-name>CookieServlet</servlet-name>
+    </filter-mapping>-->
+
+
 </web-app>
