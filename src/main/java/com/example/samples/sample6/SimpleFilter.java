@@ -18,7 +18,7 @@ import java.util.Enumeration;
  * albo poprzez podanie wzorca URL:
  * urlPatterns = {"/sample5", "/sample6", ...}
  */
-// @WebFilter(filterName = "SimpleFilter", urlPatterns = {"/"})
+// @WebFilter(filterName = "SimpleFilter", urlPatterns = {"/*"})
 @WebFilter(filterName = "SimpleFilter", servletNames = {"CookieServlet"})
 public class SimpleFilter implements Filter {
 
