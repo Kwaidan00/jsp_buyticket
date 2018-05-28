@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="jsp_buyticket:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="buy-ticket.war">
-      <element id="artifact" artifact-name="jsp_buyticket:war exploded" />
-    </root>
-  </artifact>
-</component>
