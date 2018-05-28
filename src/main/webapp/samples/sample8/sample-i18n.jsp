@@ -9,7 +9,7 @@
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"/>
 <%--<fmt:setLocale value="pl_PL"/>--%>
 <fmt:setLocale value="${language}"/>
-<fmt:setBundle basename="resources.labels"/>
+<fmt:setBundle basename="labels"/>
 
 <html>
 <head>

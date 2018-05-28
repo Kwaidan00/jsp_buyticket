@@ -16,7 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Dyrektywy i zmienne</title>
 </head>
@@ -24,9 +25,9 @@
 <%--
     Użycie dyrektywy.
     Do tego pliku zostanie przeklejona na etapie kompilacji
-    zawartość pligu JSPF.
+    zawartość pliku JSPF.
 --%>
-<%@ include file="jsp-header.jspf"%>
+<%@ include file="jsp-header.jspf" %>
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -38,7 +39,8 @@
                 Expression Language.
             --%>
             <ul>
-                <li>Adres lokalny: <%= request.getLocalAddr() %></li>
+                <li>Adres lokalny: <%= request.getLocalAddr() %>
+                </li>
                 <li>Nazwa lokalna: ${pageContext.request.localName}</li>
                 <li>Port lokalny: ${pageContext.request.localPort}</li>
             </ul>
@@ -52,16 +54,34 @@
                 Użyto zmiennej niejawnej request.
             --%>
             <table>
-                <tr><td>Header name</td><td>Header value</td></tr>
-            <%
-                Enumeration headerNames = request.getHeaderNames();
-                while (headerNames.hasMoreElements()) {
-                    String parameterName = (String) headerNames.nextElement();
-                    String parameterValue = (String) request.getHeader(parameterName);
-            %>
-                    <tr><td><%= parameterName %></td><td><%= parameterValue%></td></tr>
-                <%}
-            %>
+                <tr>
+                    <td>Header name</td>
+                    <td>Header value</td>
+                </tr>
+                <%
+                    Enumeration headerNames = request.getHeaderNames();
+                    while (headerNames.hasMoreElements()) {
+                        String parameterName = (String) headerNames.nextElement();
+                        String parameterValue = (String) request.getHeader(parameterName);
+                        if (parameterName.equals("user-agent")) {
+                %>
+                <tr>
+                    <td>USER-AGENT</td>
+                    <td></td>
+                </tr>
+                <%
+                } else {
+                %>
+                <tr>
+                    <td><%= parameterName %>
+                    </td>
+                    <td><%= parameterValue%>
+                    </td>
+                </tr>
+                <%
+                        }
+                    }
+                %>
             </table>
         </div>
     </div>

@@ -4,6 +4,8 @@
 
 package com.example.samples.model;
 
+import org.json.JSONObject;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -41,5 +43,11 @@ public class City implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("name", this.name);
+        return json;
     }
 }
